@@ -1,5 +1,6 @@
 import sqlite3
 import random
+from operator import div
 from time import perf_counter
 
 
