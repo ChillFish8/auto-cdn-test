@@ -5,7 +5,8 @@ mod mem_db;
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     let pool = mem_db::SqlitePool::connect(
-        "file:memdb1?mode=memory&cache=shared"
+        "file:memdb1?mode=memory&cache=shared",
+        10,
     ).await?;
 
     {
